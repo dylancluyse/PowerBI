@@ -172,3 +172,59 @@ Scan only = CALCULATE(
     })
 )
 ```
+
+# Hoofdstuk X: Dimensionality Reduction
+
+Veel features:
+* MNIST: 748 features (pixel-waarden)
+* Aantal verminderen en nog steeds een gelijk resultaat behouden.
+
+
+Aanpak bij MNIST
+* Aantal pixels verminderen --> Twee pixels naast elkaar in één kolom.
+* De witte pixels op de image borders verwijderen.
+
+
+Swiss Roll
+* Unroll
+* Manifold learning
+
+PCA:
+* Meerdere projecties: 
+  * Het aantal lijnen hangt af van het aantal features.
+  * De lijn/projectie kiezen met de maximumvariantie.
+  * SVD gebruiken --> V bevat alle PC's
+
+
+# Hoofdstuk X: Clustering
+
+*Unsupervised learning*
+* Data gaan groeperen waarvan we zelf geen groepering kennen.
+* Een zicht krijgen op de data. 
+* Groeperingen ontdekken.
+
+Manieren:
+* K-mean
+  * Kortste afstand tussen het centrum van een cluster en de node.
+  * k = 5 --> 5 centrale punten plaatsen
+  * optimale 'k' achterhalen? 
+    * **Inertia**: hoe goed is de clustering: de afstand tussen het centrale punt en de datapunten
+    * **Silhouette score**: coëfficient tussen -1 en 1:
+      * dicht bij 1 = goed / dicht bij -1 = niet goed en mogelijks deel uit van de verkeerde cluster
+
+| Manier | Uitleg |
+| -- | -- |
+| K-mean | De kortste afstand tussen het centrale punt (centroid) en het datapunt. Als k = 5, dan wordt er bij de start vijf centrale punten geplaatst. |
+| DBSCAN | Hoeveel instanties per epsilon (e). Alle instanties in de nabijheid. Het aantal instanties in de buurt (epsilon neighbours). |
+| Gaussian | Ellipsen herkennen. Het algoritme gaat er van uit dat alle clusters in de vorm van een Gaussiaanse distributie is gemaakt. Iedere cluster kan een eigen vorm aannemen. |
+| Hierarchical clustering | Vaak bij weinig invoer data. Niet zo druk (density). We hebben een distance-functie. We rangschikken de afstand tussen twee punten van klein naar groot. |
+
+* Gaussian
+  * Ellipsen
+* Hierarchical
+  * ...
+* DBSCAN
+  * ...
+
+
+
